@@ -9,3 +9,5 @@ deploy:
   provider: npm
   email: mdh.heydari@gmail.com
   api_key: $NPM_AUTH_TOKEN
+  on:
+    branch: master
