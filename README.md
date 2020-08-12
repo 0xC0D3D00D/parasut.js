@@ -541,21 +541,18 @@ var defaultClient = Parasut.ApiClient.instance;
 var parasut_auth = defaultClient.authentications['parasut_auth'];
 parasut_auth.accessToken = "YOUR ACCESS TOKEN"
 
-var api = new Parasut.AccountsApi()
+var api = new Parasut.ApiHomeApi();
 
 var companyId = 56; // {Number} Firma ID
-
-var accountForm = new Parasut.AccountForm(); // {AccountForm} 
-
 
 var callback = function(error, data, response) {
   if (error) {
     console.error(error);
   } else {
-    console.log('API called successfully. Returned data: ' + data);
+    console.log('API called successfully. Returned data: ', data);
   }
 };
-api.createAccount(companyId, accountForm, callback);
+api.showMe(companyId, callback);
 
 ```
 
