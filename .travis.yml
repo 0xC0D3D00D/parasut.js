@@ -4,3 +4,8 @@ node_js:
   - "8"
   - "12"
   - "14"
+
+deploy:
+  provider: npm
+  email: mdh.heydari@gmail.com
+  api_key: $NPM_AUTH_TOKEN
